@@ -1,0 +1,115 @@
+<template>
+  <v-app>
+    <!-- navigation drawer -->
+    <v-navigation-drawer v-if="!registry" app v-model="drawer" right temporary>
+      <template v-slot:prepend>
+        <v-list-item dense two-line>
+          <v-list-item-avatar>
+            <img src="https://randomuser.me/api/portraits/men/81.jpg" />
+          </v-list-item-avatar>
+
+          <v-list-item-content>
+            <v-list-item-title>Nathan Sadala</v-list-item-title>
+            <v-list-item-subtitle>Logged In</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+        <v-divider></v-divider>
+        <v-list-item to="/account-page" dense link>
+          <v-list-item-icon>
+            <v-icon>mdi-cog-outline</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>Mon compte</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item @click="logout" dense link>
+          <v-list-item-icon>
+            <v-icon>mdi-logout-variant</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>Se Deconnecter</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item>
+          <v-text-field
+            outlined
+            clearable
+            dense
+            class="mt-3 hidden-sm-and-up"
+            append-icon="mdi-magnify"
+            placeholder="Rechercher un produit"
+          ></v-text-field>
+        </v-list-item>
+      </template>
+      <v-divider></v-divider>
+      <v-list dense nav>
+        <v-list-item to="/" link>
+          <v-list-item-content>
+            <v-list-item-title>Accueil</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item to="/products" link>
+          <v-list-item-content>
+            <v-list-item-title>Produits</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item to="/stores" link>
+          <v-list-item-content>
+            <v-list-item-title>Magasins</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item to="/categories" link>
+          <v-list-item-content>
+            <v-list-item-title>Catégories</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item to="/contact" link>
+          <v-list-item-content>
+            <v-list-item-title>Nous contacter</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
+    <!-- bar de menu -->
+    <Appbar v-if="!registry" @toggleDrawer="toggle"></Appbar>
+
+    <!-- le contenu principal de l'application -->
+    <v-main>
+      <router-view />
+    </v-main>
+
+    <!-- notre footer -->
+    <v-footer app padless>
+      <v-col class="text-center" cols="12">
+        {{ new Date().getFullYear() }} — <strong>SUPERWENZE</strong>
+      </v-col>
+    </v-footer>
+  </v-app>
+</template>
+
+<script>
+import Appbar from "./components/Appbar.vue";
+import { mapGetters } from "vuex";
+
+export default {
+  name: "App",
+  components: { Appbar },
+  data: () => ({
+    drawer: false,
+  }),
+  methods: {
+    toggle(data) {
+      this.drawer = data;
+    },
+    logout() {
+      window.sessionStorage.clear();
+      this.$router.push('/');
+      window.location.reload();
+    },
+  },
+  computed: {
+    ...mapGetters(["registry"]),
+  },
+};
+</script>
