@@ -82,7 +82,7 @@
     <!-- notre footer -->
     <v-footer app padless>
       <v-col class="text-center" cols="12">
-        {{ new Date().getFullYear() }} — <strong>SUPERWENZE</strong>
+        {{ new Date().getFullYear() }} — <strong>CCN</strong>
       </v-col>
     </v-footer>
   </v-app>

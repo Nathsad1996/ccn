@@ -80,7 +80,7 @@
         </v-card>
       </v-col>
       <v-col lg="4" md="4" cols="12">
-        <v-card elevation="10" id="paycard" rounded="xl">
+        <v-card elevation="10" rounded="xl">
           <v-card-title class="text-lg-h4 text-md-h4 text-sm-h5">
             <v-container>
               <v-row>
@@ -319,17 +319,4 @@ export default {
 };
 </script>
 <style scoped>
-#paycard {
-  background: #e0eafc; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #cfdef3,
-    #e0eafc
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #cfdef3,
-    #e0eafc
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
 </style>
