@@ -112,6 +112,7 @@
               <v-row dense class="mx-auto">
                 <v-col>
                   <v-card
+                    id="accountimg"
                     rounded="xl"
                     color="#385F73"
                     height="200"
@@ -123,7 +124,6 @@
                         <v-col cols="5">
                           <v-img
                             contain
-                            id="accountimg"
                             src="../assets/catalog.svg"
                             aspect-ratio="1.6"
                           >
@@ -136,6 +136,7 @@
                 </v-col>
                 <v-col>
                   <v-card
+                    id="accountimg"
                     rounded="xl"
                     color="#385F73"
                     height="200"
@@ -159,6 +160,7 @@
                 </v-col>
                 <v-col>
                   <v-card
+                    id="accountimg"
                     rounded="xl"
                     color="#385F73"
                     height="200"
@@ -170,7 +172,6 @@
                         <v-col cols="5">
                           <v-img
                             contain
-                            id="accountimg"
                             src="../assets/add-product.svg"
                             aspect-ratio="1.6"
                           >
@@ -294,4 +295,7 @@ export default {
 </script>
 
 <style scoped>
+#accountimg {
+  cursor: pointer;
+}
 </style>
