@@ -114,86 +114,71 @@
                   <v-card
                     rounded="xl"
                     color="#385F73"
-                    height="250"
+                    height="200"
                     width="350"
                     dark
                   >
-                    <v-img
-                      contain
-                      src="../assets/catalog.svg"
-                      aspect-ratio="1.6"
-                    >
-                      <v-card-title class="text-h5">
-                        Votre Catalogue
-                      </v-card-title>
-
-                      <v-card-subtitle
-                        >Listen to your favorite artists and
-                        albums.</v-card-subtitle
-                      >
-
-                      <v-card-actions>
-                        <v-btn text> Listen Now </v-btn>
-                      </v-card-actions>
-                    </v-img>
+                    <v-container>
+                      <v-row class="mx-auto mt-10">
+                        <v-col cols="5">
+                          <v-img
+                            contain
+                            id="accountimg"
+                            src="../assets/catalog.svg"
+                            aspect-ratio="1.6"
+                          >
+                          </v-img>
+                        </v-col>
+                        <v-col class="mt-4"> Votre catalogue </v-col>
+                      </v-row>
+                    </v-container>
                   </v-card>
                 </v-col>
                 <v-col>
                   <v-card
                     rounded="xl"
                     color="#385F73"
-                    height="250"
+                    height="200"
                     width="350"
                     dark
                   >
-                    <v-img
-                      contain
-                      id="accountimg"
-                      src="../assets/orders.svg"
-                      aspect-ratio="1.6"
-                    >
-                      <v-card-title class="text-h5">
-                        Ordrs des clients
-                      </v-card-title>
-
-                      <v-card-subtitle
-                        >Listen to your favorite artists and
-                        albums</v-card-subtitle
-                      >
-
-                      <v-card-actions>
-                        <v-btn text> Listen Now </v-btn>
-                      </v-card-actions>
-                    </v-img>
+                    <v-container>
+                      <v-row class="mx-auto mt-10">
+                        <v-col cols="5">
+                          <v-img
+                            contain
+                            src="../assets/orders.svg"
+                            aspect-ratio="1.6"
+                          >
+                          </v-img>
+                        </v-col>
+                        <v-col class="mt-4"> Les commandes clients </v-col>
+                      </v-row>
+                    </v-container>
                   </v-card>
                 </v-col>
                 <v-col>
                   <v-card
                     rounded="xl"
                     color="#385F73"
-                    height="250"
+                    height="200"
                     width="350"
                     dark
                   >
-                    <v-img
-                      contain
-                      id="accountimg"
-                      src="../assets/add-product.svg"
-                      aspect-ratio="1.6"
-                    >
-                      <v-card-title class="text-h5">
-                        Ajouter un produit
-                      </v-card-title>
-
-                      <v-card-subtitle
-                        >Listen to your favorite artists and
-                        albums</v-card-subtitle
-                      >
-
-                      <v-card-actions>
-                        <v-btn text> Listen Now </v-btn>
-                      </v-card-actions>
-                    </v-img>
+                    <v-container>
+                      <v-row class="mx-auto mt-10">
+                        <v-col cols="5">
+                          <v-img
+                            contain
+                            id="accountimg"
+                            src="../assets/add-product.svg"
+                            aspect-ratio="1.6"
+                          >
+                          </v-img>
+                        </v-col>
+                        <v-col class="mt-4"> Ajouter un produits </v-col>
+                      </v-row>
+                    </v-container>
                   </v-card>
                 </v-col>
               </v-row>
