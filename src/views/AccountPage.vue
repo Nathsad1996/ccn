@@ -8,7 +8,6 @@
           center-active
           centered
           mobile-breakpoint="sm"
-          dark
         >
           <v-tab><v-icon>mdi-cart</v-icon> &nbsp; Vos Commandes </v-tab>
           <v-tab><v-icon>mdi-cog</v-icon> &nbsp; Votre compte </v-tab>
