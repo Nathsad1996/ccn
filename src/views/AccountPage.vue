@@ -111,6 +111,7 @@
               <v-row dense class="mx-auto">
                 <v-col>
                   <v-card
+                  to="/catalog"
                     id="accountimg"
                     rounded="xl"
                     color="#385F73"
@@ -135,6 +136,7 @@
                 </v-col>
                 <v-col>
                   <v-card
+                  to="/orders"
                     id="accountimg"
                     rounded="xl"
                     color="#385F73"
@@ -159,6 +161,7 @@
                 </v-col>
                 <v-col>
                   <v-card
+                  to="/new-product"
                     id="accountimg"
                     rounded="xl"
                     color="#385F73"
