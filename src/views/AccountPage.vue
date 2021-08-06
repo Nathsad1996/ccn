@@ -31,7 +31,7 @@
           <v-tab-item>
             <v-container>
               <v-row>
-                <v-col cols="12">
+                <v-col offset-lg="3" offset-md="3" lg="6" md="6" cols="12">
                   <v-card rounded="xl">
                     <v-card-title
                       class="text-lg-h3 d-flex justify-center text-center"
