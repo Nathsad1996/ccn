@@ -40,56 +40,56 @@
 
                     <v-card-text>
                       <v-text-field
-                        rounded
+                        dense
                         outlined
                         label="votre email"
                         readonly
                         append-icon="mdi-pencil"
                       ></v-text-field>
                       <v-text-field
-                        rounded
+                        dense
                         outlined
                         label="votre email"
                         readonly
                         append-icon="mdi-pencil"
                       ></v-text-field>
                       <v-text-field
-                        rounded
+                        dense
                         outlined
                         label="votre email"
                         readonly
                         append-icon="mdi-pencil"
                       ></v-text-field>
                       <v-text-field
-                        rounded
+                        dense
                         outlined
                         label="votre email"
                         readonly
                         append-icon="mdi-pencil"
                       ></v-text-field>
                       <v-text-field
-                        rounded
+                        dense
                         outlined
                         label="votre email"
                         readonly
                         append-icon="mdi-pencil"
                       ></v-text-field>
                       <v-text-field
-                        rounded
+                        dense
                         outlined
                         label="votre email"
                         readonly
                         append-icon="mdi-pencil"
                       ></v-text-field>
                       <v-text-field
-                        rounded
+                        dense
                         outlined
                         label="votre email"
                         readonly
                         append-icon="mdi-pencil"
                       ></v-text-field>
                       <v-text-field
-                        rounded
+                        dense
                         outlined
                         label="votre email"
                         readonly
@@ -97,7 +97,7 @@
                       ></v-text-field>
                     </v-card-text>
                     <v-card-actions>
-                      <v-btn rounded block solo color="success"
+                      <v-btn dense rounded block solo color="success"
                         >Sauvegarder</v-btn
                       >
                     </v-card-actions>

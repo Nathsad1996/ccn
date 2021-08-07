@@ -18,12 +18,11 @@
           &nbsp;
           <v-form>
             <v-text-field
-              rounded
+              dense
               outlined
               label="Veuillez saisir le nom"
             ></v-text-field>
             <v-textarea
-              rounded
               label="Veuillez saisir une description"
               outlined
             ></v-textarea>
@@ -35,25 +34,26 @@
               multiple
               chips
               outlined
-              rounded
+              dense
               clearable
             ></v-file-input>
             <v-text-field
-              rounded
+              dense
               outlined
               label="Veuillez saisir le prix de vente"
             ></v-text-field>
             <v-text-field
-              rounded
+              dense
               outlined
               label="Veuillez saisir le prix pour avec une reduction (optionnelle)"
             ></v-text-field>
             <v-text-field
-              rounded
+              dense
               outlined
               label="Veuillez saisir quantité disponible"
             ></v-text-field>
             <v-checkbox
+              dense
               v-model="checkbox"
               label="Ce produit est disponible en plusieurs option(version, taille)"
               @change="initArray"
@@ -79,16 +79,22 @@
                 dense
               ></v-text-field>
               &nbsp;
-              <v-btn text icon small class="mt-1" rounded @click="deleteOption">
+              <v-btn text icon small class="mt-1" @click="deleteOption">
                 <v-icon color="red">mdi-window-close</v-icon>
               </v-btn>
             </v-btn-toggle>
             <br />
-            <v-btn v-if="checkbox" rounded color="danger" @click="addOption">
+            <v-btn
+              v-if="checkbox"
+              small
+              rounded
+              color="info"
+              @click="addOption"
+            >
               <v-icon>mdi-plus</v-icon> Ajouter une option
             </v-btn>
           </v-form>
-          <v-card-actions>
+          <v-card-actions class="mt-3">
             <v-btn block rounded color="success">Ajouter</v-btn>
           </v-card-actions>
         </v-card>
