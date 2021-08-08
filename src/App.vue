@@ -1,9 +1,9 @@
 <template>
   <v-app>
     <!-- navigation drawer -->
-    <v-navigation-drawer v-if="!registry" app v-model="drawer" right temporary>
+    <v-navigation-drawer v-if="!registry" app v-model="drawer" temporary>
       <template v-slot:prepend>
-        <v-list-item dense two-line>
+        <v-list-item dense two-line >
           <v-list-item-avatar>
             <img src="https://randomuser.me/api/portraits/men/81.jpg" />
           </v-list-item-avatar>
@@ -32,6 +32,7 @@
         </v-list-item>
         <v-list-item>
           <v-text-field
+            rounded
             outlined
             clearable
             dense
@@ -99,7 +100,7 @@ export default {
     },
     logout() {
       window.sessionStorage.clear();
-      this.$router.push('/');
+      this.$router.push("/");
       window.location.reload();
     },
   },

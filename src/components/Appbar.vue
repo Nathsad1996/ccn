@@ -1,10 +1,14 @@
 <template>
-  <v-app-bar color="#363945" elevate-on-scroll app>
+  <v-app-bar color="#A0DAA9" elevate-on-scroll app>
     <v-app-bar-nav-icon @click="goHome">
       <v-icon size="50">mdi-shopping</v-icon>
     </v-app-bar-nav-icon>
 
     <v-toolbar-title class="d-none d-sm-flex">CCN</v-toolbar-title>
+
+    <v-btn icon @click="navigationDrawer">
+      <v-icon>mdi-menu</v-icon>
+    </v-btn>
 
     <v-spacer></v-spacer>
 
@@ -107,10 +111,6 @@
         </v-dialog>
       </v-list>
     </v-menu>
-
-    <v-btn icon @click="navigationDrawer">
-      <v-icon>mdi-menu</v-icon>
-    </v-btn>
   </v-app-bar>
 </template>
 <script>

@@ -12,8 +12,7 @@
       </v-carousel>
     </v-row>
     <v-row class="mx-auto mb-2">
-      <v-hover v-slot="{ hover }">
-        <v-card width="100%" :elevation="hover ? 12 : 2">
+        <v-card width="100%">
           <v-card-title>
             <v-icon>fas fa-border-all</v-icon> &nbsp; Nos Catégories
           </v-card-title>
@@ -26,11 +25,9 @@
             </v-row>
           </v-card-text>
         </v-card>
-      </v-hover>
     </v-row>
     <v-row class="mx-auto mb-2">
-      <v-hover v-slot="{ hover }">
-        <v-card width="100%" :elevation="hover ? 12 : 2">
+        <v-card width="100%">
           <v-card-title>
             <v-icon>fas fa-heartbeat</v-icon> &nbsp; Nos meilleures ventes
           </v-card-title>
@@ -43,7 +40,6 @@
             </v-row>
           </v-card-text>
         </v-card>
-      </v-hover>
     </v-row>
   </v-container>
 </template>
