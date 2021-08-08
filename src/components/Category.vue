@@ -1,37 +1,29 @@
 <template>
   <v-card
+    hover
+    rounded="xl"
     class="mx-auto mb-2"
     width="300"
     @mouseenter="revealCard"
     @mouseleave="revealCard"
   >
-    <v-card-text>
-      <div>Téléviseurs</div>
-      <p class="text-h4 text--primary">SAMSUNG</p>
-      <p>adjective</p>
-      <div class="text--primary">
-        relating to or dependent on charity; charitable.<br />
-        "an eleemosynary educational institution."
-      </div>
-    </v-card-text>
+    <v-img src="../assets/streaming-tv-app.svg" height="220" contain></v-img>
 
     <v-expand-transition>
       <v-card
-        color="info"
+        rounded="xl"
+        color="#798EA4"
         v-if="reveal"
         class="transition-fast-in-fast-out v-card--reveal"
-        style="height: 100%"
+        height="100%"
+        width="100%"
       >
-        <v-card-text class="pb-0">
-          <p class="text-h4 text--primary">Déscription</p>
-          <p>
-            late 16th century (as a noun denoting a place where alms were
-            distributed): from medieval Latin eleemosynarius,
-          </p>
-        </v-card-text>
-        <v-card-actions>
-          <v-btn block outlined @click="goCategory">
-            <v-icon size="20">fas fa-external-link-alt</v-icon>
+        <v-card-title class="text-center mt-15">
+          VISITEZ NOS MAGNIFIQUES PRODUITS
+        </v-card-title>
+        <v-card-actions class="d-flex justify-center">
+          <v-btn rounded block outlined>
+            details
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -48,7 +40,7 @@ export default {
       this.reveal = !this.reveal;
     },
     goCategory() {
-      this.$router.push('/category-detail');
+      this.$router.push("/category-detail");
     },
   },
 };

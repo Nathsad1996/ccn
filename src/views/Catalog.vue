@@ -1,9 +1,9 @@
 <template>
   <div>
-    <v-row class="mx-auto">
+    <v-row class="mx-auto mt-1">
       <v-col class="float-left" cols="1">
         <v-btn icon @click="previous">
-          <v-icon size="40"> mdi-keyboard-backspace </v-icon>
+          <v-icon size="40"> mdi-arrow-left </v-icon>
         </v-btn>
       </v-col>
     </v-row>

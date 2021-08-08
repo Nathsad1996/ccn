@@ -1,55 +1,24 @@
 <template>
   <div>
     <v-row class="mt-2 mx-auto">
-      <!-- bouton pour le filtre -->
-      <v-col class="hidden-md-and-up">
-        <v-bottom-sheet v-model="sheet" scrollable>
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn icon outlined v-bind="attrs" v-on="on" class="mr-2 float-right">
-              <v-icon>mdi-filter</v-icon>
-              </v-btn>
-          </template>
-          <v-card>
-            <v-toolbar color="dark" dense flat elevation="2">
-              <v-spacer></v-spacer>
-              <v-btn icon @click="sheet = !sheet">
-                <v-icon>mdi-close</v-icon>
-              </v-btn>
-            </v-toolbar>
-            <v-card-text>
+      <v-col class="d-flex justify-end">
+        <v-card flat rounded="xl" height="48" width="60%">
+          <v-card-text>
+            <v-menu offset-y>
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn color="grey lighten-1" v-bind="attrs" v-on="on" rounded class="float-right">
+                  <v-icon>mdi-filter-variant</v-icon>
+                  filtrer
+                </v-btn>
+              </template>
               <v-list>
-                <v-subheader>Filtrer par </v-subheader>
-                <v-list-item
-                  v-for="(item, i) in items"
-                  :key="i"
-                  @click="sheet = false"
-                >
-                  <v-list-item-title> {{ item }}</v-list-item-title>
-                </v-list-item>
+                <v-list-item link>Prix</v-list-item>
+                <v-list-item link>Marque</v-list-item>
+                <v-list-item link>Categories</v-list-item>
               </v-list>
-            </v-card-text>
-          </v-card>
-        </v-bottom-sheet>
-      </v-col>
-      <v-col
-        offset-lg="10"
-        offset-md="10"
-        lg="2"
-        md="2"
-        class="hidden-sm-and-down"
-      >
-        <v-select
-          clearable
-          flat
-          solo
-          open-on-clear
-          dense
-          prepend-inner-icon="mdi-filter"
-          v-model="select"
-          :items="items"
-          label="Trier par"
-          single-line
-        ></v-select>
+            </v-menu>
+          </v-card-text>
+        </v-card>
       </v-col>
     </v-row>
     <v-row class="mx-auto">

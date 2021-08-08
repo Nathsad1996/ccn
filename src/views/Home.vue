@@ -12,7 +12,7 @@
       </v-carousel>
     </v-row>
     <v-row class="mx-auto mb-2">
-        <v-card width="100%">
+        <v-card width="100%" flat>
           <v-card-title>
             <v-icon>fas fa-border-all</v-icon> &nbsp; Nos Catégories
           </v-card-title>
@@ -27,7 +27,7 @@
         </v-card>
     </v-row>
     <v-row class="mx-auto mb-2">
-        <v-card width="100%">
+        <v-card width="100%" flat>
           <v-card-title>
             <v-icon>fas fa-heartbeat</v-icon> &nbsp; Nos meilleures ventes
           </v-card-title>
