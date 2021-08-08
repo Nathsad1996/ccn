@@ -1,14 +1,16 @@
 <template>
-  <v-app-bar elevate-on-scroll app>
+  <v-app-bar color="#363945" elevate-on-scroll app>
     <v-app-bar-nav-icon @click="goHome">
-      <v-icon>mdi-shopping</v-icon>
+      <v-icon size="50">mdi-shopping</v-icon>
     </v-app-bar-nav-icon>
 
-    <v-toolbar-title class="grey--text d-none d-sm-flex">CCN</v-toolbar-title>
+    <v-toolbar-title class="d-none d-sm-flex">CCN</v-toolbar-title>
 
     <v-spacer></v-spacer>
 
     <v-text-field
+      background-color="white"
+      rounded
       outlined
       clearable
       dense
@@ -32,7 +34,7 @@
       </v-list>
     </v-menu>
 
-    <v-btn color="dark" icon>
+    <v-btn color="dark" icon to="/shopping-cart">
       <v-icon>mdi-cart-outline</v-icon>
       {{ cartcount }}
     </v-btn>

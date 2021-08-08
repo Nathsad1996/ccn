@@ -53,11 +53,6 @@
             <v-list-item-title>Produits</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item to="/stores" link>
-          <v-list-item-content>
-            <v-list-item-title>Magasins</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
         <v-list-item to="/categories" link>
           <v-list-item-content>
             <v-list-item-title>Catégories</v-list-item-title>

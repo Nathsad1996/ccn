@@ -59,7 +59,7 @@
     </v-row>
     <v-row class="mx-auto">
       <!-- la liste de nos produits -->
-      <v-col v-for="(index, i) in items" :key="i">
+      <v-col lg="2" sm="6" cols="6" v-for="(index, i) in items" :key="i">
         <Product></Product>
       </v-col>
     </v-row>
@@ -72,7 +72,7 @@ export default {
   data: () => ({
     select: null,
     sheet: false,
-    items: Array.from(Array(8).keys()),
+    items: Array.from(Array(31).keys()),
     tiles: [
       { img: "keep.png", title: "Keep" },
       { img: "inbox.png", title: "Inbox" },

@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-row class="mx-auto mb-2">
+    <v-row class="mb-2">
       <v-carousel hide-delimiter-background v-model="model" class="mt-2" :show-arrows="false">
         <v-carousel-item v-for="(color, i) in colors" :key="color">
           <v-sheet :color="color" height="100%" tile>

@@ -1,30 +1,31 @@
 <template>
-  <v-card class="mx-auto mb-2" max-width="300">
+  <v-card hover rounded="xl" class="mx-auto mb-2" width="350">
+    <v-card-title class="text-body-1 title d-flex justify-center">Pagne VLISCO</v-card-title>
     <v-img
-      id="product"
-      height="150"
-      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-    ></v-img>
-    <v-card-title class="d-flex justify-center text-sm-body-2 text-md-body-1">
-      <p>CHAWARMA</p>
-    </v-card-title>
-    <v-card-subtitle class="d-flex justify-center"> 5000 CDF </v-card-subtitle>
-    <v-card-actions>
-      <v-container>
-        <v-row>
-          <v-col cols="12">
-            <v-btn color="success" block @click="addProduct" outlined>
-              <v-icon>mdi-cart-plus</v-icon> &nbsp; Ajouter
-            </v-btn>
-          </v-col>
-          <v-col cols="12">
-            <v-btn color="info" block @click="productdetail" outlined>
-              <v-icon>mdi-information</v-icon> &nbsp; Détails
-            </v-btn>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-card-actions>
+      contain
+      @click="productdetail"
+      class="cardimg"
+      height="130"
+      src="../assets/male-clothes.svg"
+    >
+    </v-img>
+    <v-card-text>
+      <v-row>
+        <v-col class="price d-flex justify-start">
+          30000 USD
+        </v-col>
+        <v-col class="d-flex justify-end">
+          <v-btn
+            outlined
+            fab
+            :color="color"
+            class="mybutton"
+            @click="addProduct"
+            ><v-icon>{{ icon }}</v-icon></v-btn
+          >
+        </v-col>
+      </v-row>
+    </v-card-text>
   </v-card>
 </template>
 <script>
@@ -33,6 +34,8 @@ import { mapActions } from "vuex";
 export default {
   data: () => ({
     reveal: false,
+    icon: "mdi-cart-plus",
+    color: "white",
   }),
   methods: {
     ...mapActions(["setCartCount"]),
@@ -47,13 +50,26 @@ export default {
 </script>
 
 <style scoped>
-.v-card--reveal {
-  bottom: 0;
-  opacity: 1 !important;
-  position: absolute;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@500&display=swap");
+
+.title {
+  font-family: "Titillium Web", sans-serif !important;
+}
+.price {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: bolder;
 }
 
-#product {
+.cardimg {
   cursor: pointer;
+}
+
+.mybutton {
+  background-color: black;
+}
+
+.mycard{
+  background-color: #EFE1CE;
 }
 </style>
