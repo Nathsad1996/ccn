@@ -14,20 +14,12 @@
           </v-list-item-content>
         </v-list-item>
         <v-divider></v-divider>
-        <v-list-item to="/account-page" dense link>
+        <v-list-item to="/account-page" link>
           <v-list-item-icon>
             <v-icon>mdi-cog-outline</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-title>Mon compte</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item @click="logout" dense link>
-          <v-list-item-icon>
-            <v-icon>mdi-logout-variant</v-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title>Se Deconnecter</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
@@ -43,7 +35,7 @@
         </v-list-item>
       </template>
       <v-divider></v-divider>
-      <v-list dense nav>
+      <v-list>
         <v-list-item to="/" link>
           <v-list-item-content>
             <v-list-item-title>Accueil</v-list-item-title>
@@ -65,6 +57,13 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
+      <template v-slot:append>
+        <div class="pa-2">
+          <v-btn large rounded color="#CD212A" block @click="logout">
+            Logout
+          </v-btn>
+        </div>
+      </template>
     </v-navigation-drawer>
 
     <!-- bar de menu -->

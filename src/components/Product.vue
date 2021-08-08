@@ -1,5 +1,5 @@
 <template>
-  <v-card hover rounded="xl" class="mx-auto mb-2" width="350">
+  <v-card hover rounded="xl" class="mx-auto mb-2 mycard" width="350">
     <v-card-title class="text-body-1 title d-flex justify-center">Pagne VLISCO</v-card-title>
     <v-img
       contain
@@ -70,6 +70,6 @@ export default {
 }
 
 .mycard{
-  background-color: #EFE1CE;
+  background-color: #F0EAD6;
 }
 </style>

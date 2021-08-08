@@ -1,19 +1,18 @@
 <template>
-  <v-app-bar color="#A0DAA9" elevate-on-scroll app>
-    <v-app-bar-nav-icon @click="goHome">
-      <v-icon size="50">mdi-shopping</v-icon>
-    </v-app-bar-nav-icon>
+  <v-app-bar elevate-on-scroll color="blue-grey darken-2" app>
+    <!-- <v-app-bar-nav-icon @click="goHome">
+      <v-icon size="40">mdi-shopping</v-icon>
+    </v-app-bar-nav-icon> -->
 
     <v-toolbar-title class="d-none d-sm-flex">CCN</v-toolbar-title>
 
     <v-btn icon @click="navigationDrawer">
-      <v-icon>mdi-menu</v-icon>
+      <v-icon size="40">mdi-menu</v-icon>
     </v-btn>
 
     <v-spacer></v-spacer>
 
     <v-text-field
-      background-color="white"
       rounded
       outlined
       clearable
@@ -27,7 +26,7 @@
 
     <v-menu :rounded="'0'" offset-y>
       <template v-slot:activator="{ on, attrs }">
-        <v-btn color="blue" v-bind="attrs" v-on="on" icon>
+        <v-btn v-bind="attrs" v-on="on" icon>
           <v-icon>mdi-translate</v-icon>
         </v-btn>
       </template>
@@ -38,14 +37,14 @@
       </v-list>
     </v-menu>
 
-    <v-btn color="dark" icon to="/shopping-cart">
+    <v-btn icon to="/shopping-cart">
       <v-icon>mdi-cart-outline</v-icon>
       {{ cartcount }}
     </v-btn>
 
     <v-dialog v-model="loginForm" width="400">
       <template v-slot:activator="{ on, attrs }">
-        <v-btn icon color="success" rounded small v-bind="attrs" v-on="on">
+        <v-btn icon rounded small v-bind="attrs" v-on="on">
           <v-icon>mdi-login</v-icon>
         </v-btn>
       </template>
@@ -84,7 +83,7 @@
 
     <v-menu offset-y>
       <template v-slot:activator="{ on, attrs }">
-        <v-btn icon color="info" v-bind="attrs" v-on="on">
+        <v-btn icon v-bind="attrs" v-on="on">
           <v-icon>mdi-account-plus-outline</v-icon>
         </v-btn>
       </template>
