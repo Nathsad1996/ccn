@@ -3,7 +3,7 @@
     <!-- navigation drawer -->
     <v-navigation-drawer v-if="!registry" app v-model="drawer" temporary>
       <template v-slot:prepend>
-        <v-list-item dense two-line >
+        <v-list-item dense two-line>
           <v-list-item-avatar>
             <img src="https://randomuser.me/api/portraits/men/81.jpg" />
           </v-list-item-avatar>
@@ -31,6 +31,8 @@
             class="mt-3 hidden-sm-and-up"
             append-icon="mdi-magnify"
             placeholder="Rechercher un produit"
+            @click:append="search"
+            @keypress.enter="search"
           ></v-text-field>
         </v-list-item>
       </template>
@@ -102,6 +104,7 @@ export default {
       this.$router.push("/");
       window.location.reload();
     },
+    search() {},
   },
   computed: {
     ...mapGetters(["registry"]),
