@@ -48,22 +48,20 @@
         </v-btn>
       </template>
       <v-card>
-        <v-card-title class="justify-center">Se connecter</v-card-title>
-        <v-card-text class="mt-2">
+        <v-card-title class="justify-center"
+          >Se connecter</v-card-title
+        >
+        <v-card-text>
           <v-form>
             <v-text-field
-              solo
               dense
               outlined
-              rounded
-              placeholder="Email"
+              placeholder="Email ou Login"
               append-icon="mdi-at"
             ></v-text-field>
             <v-text-field
-              solo
               dense
               outlined
-              rounded
               placeholder="Mot de passe"
               v-model="password"
               :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
@@ -72,7 +70,7 @@
             ></v-text-field>
           </v-form>
         </v-card-text>
-        <v-card-actions>
+        <v-card-actions class="">
           <v-btn @click="login" rounded block large color="success" outlined
             >Se Connecter</v-btn
           >
