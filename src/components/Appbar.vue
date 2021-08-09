@@ -1,15 +1,14 @@
 <template>
   <v-app-bar elevate-on-scroll app>
-    <!-- <v-app-bar-nav-icon @click="goHome">
-      <v-icon size="40">mdi-shopping</v-icon>
-    </v-app-bar-nav-icon> -->
-
-    <v-toolbar-title class="d-none d-sm-flex">CCN</v-toolbar-title>
-
     <v-btn icon @click="navigationDrawer">
       <v-icon size="40">mdi-menu</v-icon>
     </v-btn>
 
+    <v-app-bar-nav-icon @click="goHome">
+      <v-icon size="40">mdi-shopping</v-icon>
+    </v-app-bar-nav-icon>
+
+    <v-toolbar-title class="d-none d-sm-flex">CCN</v-toolbar-title>
     <v-spacer></v-spacer>
 
     <v-text-field

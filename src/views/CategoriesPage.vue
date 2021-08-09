@@ -6,7 +6,7 @@
           <v-card-text>
             <v-menu offset-y>
               <template v-slot:activator="{ on, attrs }">
-                <v-btn color="grey lighten-1" v-bind="attrs" v-on="on" rounded class="float-right">
+                <v-btn v-bind="attrs" v-on="on" rounded class="float-right">
                   <v-icon>mdi-filter-variant</v-icon>
                   filtrer
                 </v-btn>
@@ -32,6 +32,11 @@
         <Category></Category>
       </v-col>
     </v-row>
+    <v-row class="mb-1">
+      <v-col>
+        <v-pagination :length="6" v-model="page"></v-pagination>
+      </v-col>
+    </v-row>
   </div>
 </template>
 <script>
@@ -39,6 +44,7 @@ import Category from "../components/Category.vue";
 export default {
   components: { Category },
   data: () => ({
+    page: 1,
     select: null,
     sheet: false,
     items: Array.from(Array(8).keys()),

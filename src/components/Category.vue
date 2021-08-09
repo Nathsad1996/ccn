@@ -12,7 +12,6 @@
     <v-expand-transition>
       <v-card
         rounded="xl"
-        color="#798EA4"
         v-if="reveal"
         class="transition-fast-in-fast-out v-card--reveal"
         height="100%"
@@ -22,7 +21,7 @@
           VISITEZ NOS MAGNIFIQUES PRODUITS
         </v-card-title>
         <v-card-actions class="d-flex justify-center">
-          <v-btn rounded block outlined>
+          <v-btn text rounded block>
             details
           </v-btn>
         </v-card-actions>

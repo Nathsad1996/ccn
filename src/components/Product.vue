@@ -1,6 +1,8 @@
 <template>
   <v-card hover rounded="xl" class="mx-auto mb-2" width="300">
-    <v-card-title class="text-body-1 title d-flex justify-center">Pagne VLISCO</v-card-title>
+    <v-card-title class="text-body-1 title d-flex justify-center"
+      >Pagne VLISCO</v-card-title
+    >
     <v-img
       contain
       @click="productdetail"
@@ -11,9 +13,12 @@
     </v-img>
     <v-card-text>
       <v-row>
-        <v-col class="price d-flex justify-start">
-          30000 USD
+        <v-col class="d-flex justify-center">
+          <v-rating :value="3" dense small></v-rating>
         </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="price d-flex justify-start"> 30000 USD </v-col>
         <v-col class="d-flex justify-end">
           <v-btn
             outlined
@@ -69,7 +74,7 @@ export default {
   background-color: black;
 }
 
-.mycard{
-  background-color: #F0EAD6;
+.mycard {
+  background-color: #f0ead6;
 }
 </style>
