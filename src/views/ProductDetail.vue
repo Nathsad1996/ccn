@@ -8,8 +8,8 @@
       </v-col>
     </v-row>
     <v-row class="mx-auto">
-      <v-col lg="8" md="8" cols="12">
-        <v-card rounded="xl">
+      <v-col class="ml-lg-10" lg="8" md="8" cols="12">
+        <v-card>
           <v-card-text>
             <v-row>
               <v-col lg="6" md="6" cols="12">
@@ -52,26 +52,28 @@
                     <v-rating :value="3" readonly></v-rating>
                     46 avis
                   </v-card-subtitle>
-                  <v-card-text class="text-h5">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Harum, pariatur cupiditate eos repellendus qui odit saepe
-                    veniam sunt aspernatur, debitis totam maxime. Veniam, esse
-                    ab. Totam doloribus cupiditate explicabo praesentium!
-                  </v-card-text>
-                  <v-card-actions>
+                  <v-card-text>
                     <v-row class="mx-auto">
-                      <v-col cols="12">
+                      <v-col lg="6" cols="12" class="d-flex justify-center">
                         <v-btn-toggle>
-                          <v-btn icon @click="quantity++"
-                            ><v-icon>mdi-plus</v-icon></v-btn
+                          <v-btn icon outlined @click="quantity++">
+                            <v-icon color="primary">mdi-plus</v-icon></v-btn
                           >
                           <v-btn @click="quantity++">{{ quantity }}</v-btn>
                           <v-btn icon @click="decrease"
-                            ><v-icon>mdi-minus</v-icon></v-btn
+                            ><v-icon color="warning">mdi-minus</v-icon></v-btn
                           >
                         </v-btn-toggle>
                       </v-col>
+                      <v-col lg="6" cols="12" class="mt-2 text-h5 text-center">
+                        A 10.000 FC
+                      </v-col>
                     </v-row>
+                  </v-card-text>
+                  <v-card-actions class="text-h5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Harum, pariatur cupiditate eos repellendus qui odit saepe
+                    veniam sunt aspernatur, debitis totam maxime. Veniam,
                   </v-card-actions>
                 </v-card>
               </v-col>
@@ -79,90 +81,25 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col lg="4" md="4" cols="12">
-        <v-card elevation="10" rounded="xl">
-          <v-card-title class="text-lg-h4 text-md-h4 text-sm-h5">
-            <v-container>
-              <v-row>
-                <v-col class="text-center"> A partir de 10.000 CDF </v-col>
-              </v-row>
-              <v-row class="justify-center">
-                <v-col cols="3">
-                  <v-img
-                    contain
-                    height="50"
-                    src="../assets/credit-card.svg"
-                  ></v-img>
-                </v-col>
-                <v-col cols="3">
-                  <v-img
-                    contain
-                    height="50"
-                    src="../assets/mobile-payment.svg"
-                  ></v-img
-                ></v-col>
-              </v-row>
-            </v-container>
+      <!-- card pay -->
+      <v-col lg="3" md="3" cols="12">
+        <v-card flat>
+          <v-card-title class="d-flex justify-center text-h4">
+            A PAYER {{ quantity * 10000 }} FC
           </v-card-title>
           <v-card-text>
             <v-btn
               to="/shopping-cart"
-              rounded
-              outlined
-              color="success"
-              large
-              block
-            >
-              <v-icon>mdi-credit-card-check-outline</v-icon>
-              &nbsp; ACHETER</v-btn
-            >
-            <v-btn
-              @click="addCart"
               class="mt-1"
               rounded
-              outlined
-              color="info"
-              large
+              color="#55B4B0"
               block
+              x-large
             >
               <v-icon>mdi-cart-plus</v-icon>
               &nbsp; AJOUTER</v-btn
             >
           </v-card-text>
-          <v-card-actions>
-            <v-container>
-              <v-row class="justify-center">
-                <v-col cols="3">
-                  <v-img
-                    contain
-                    src="../assets/Fee_Shipping_Badge.png"
-                    max-height="100"
-                  ></v-img>
-                </v-col>
-                <v-col cols="3">
-                  <v-img
-                    contain
-                    src="../assets/Secure_Payment_Badge.png"
-                    max-height="100"
-                  ></v-img>
-                </v-col>
-                <v-col cols="3">
-                  <v-img
-                    contain
-                    src="../assets/Money-back_Guarantee_Badge.png"
-                    max-height="100"
-                  ></v-img>
-                </v-col>
-                <v-col cols="3">
-                  <v-img
-                    contain
-                    src="../assets/Premium_Quality_Badge.png"
-                    max-height="100"
-                  ></v-img>
-                </v-col>
-              </v-row>
-            </v-container>
-          </v-card-actions>
         </v-card>
       </v-col>
     </v-row>
@@ -178,8 +115,8 @@
                 Donner votre avis et lisez ce que les autres ont écrit!
               </v-card-title>
               <v-container>
-                <v-row class="mx-auto">
-                  <v-col lg="6" md="6" cols="12">
+                <v-row>
+                  <v-col cols="12">
                     <v-form @submit.prevent="submitreview">
                       Ta note :
                       <v-rating :value="2"></v-rating>
@@ -193,29 +130,33 @@
                         placeholder="laisser nous un avis pour aider les autres à bien choisir"
                         :counter="100"
                       ></v-textarea>
-                      <v-btn block solo rounded type="submit">SOUMETTRE</v-btn>
+                      <v-btn class="d-flex justify-center" color="info" large solo rounded type="submit">SOUMETTRE</v-btn>
                     </v-form>
                   </v-col>
-                  <v-col lg="6" md="6" cols="12">
-                    <v-virtual-scroll
-                      :height="300"
-                      :item-height="180"
-                      :items="items"
-                    >
-                      <template v-slot:default="{ item }">
-                        <v-list-item link two-line>
-                          <v-list-item-content>
-                            <v-list-item-title>{{
-                              item.name
-                            }}</v-list-item-title>
-                            <v-list-item-subtitle>
-                              <v-rating :value="item.rating"></v-rating>
-                            </v-list-item-subtitle>
-                            {{ item.review }}
-                          </v-list-item-content>
-                        </v-list-item>
-                      </template>
-                    </v-virtual-scroll>
+                  <v-col cols="12" class="mt-2">
+                    <v-card rounded="lg" class="pa-6">
+                      <v-card-text>
+                        <v-virtual-scroll
+                          :height="400"
+                          :item-height="140"
+                          :items="items"
+                        >
+                          <template v-slot:default="{ item }">
+                            <v-list-item link two-line>
+                              <v-list-item-content>
+                                <v-list-item-title>{{
+                                  item.name
+                                }}</v-list-item-title>
+                                <v-list-item-subtitle>
+                                  <v-rating :value="item.rating"></v-rating>
+                                </v-list-item-subtitle>
+                                {{ item.review }}
+                              </v-list-item-content>
+                            </v-list-item>
+                          </template>
+                        </v-virtual-scroll>
+                      </v-card-text>
+                    </v-card>
                   </v-col>
                 </v-row>
               </v-container>

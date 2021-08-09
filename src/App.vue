@@ -59,7 +59,7 @@
       </v-list>
       <template v-slot:append>
         <div class="pa-2">
-          <v-btn large rounded color="#CD212A" block @click="logout">
+          <v-btn text large rounded color="#CD212A" block @click="logout">
             Logout
           </v-btn>
         </div>
