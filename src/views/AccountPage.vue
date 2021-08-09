@@ -106,10 +106,10 @@
                     to="/catalog"
                     id="accountimg"
                     rounded="xl"
-                    color="#385F73"
+                    
                     height="200"
                     width="350"
-                    dark
+                    
                   >
                     <v-container>
                       <v-row class="mx-auto mt-10">
@@ -131,10 +131,10 @@
                     to="/orders"
                     id="accountimg"
                     rounded="xl"
-                    color="#385F73"
+                    
                     height="200"
                     width="350"
-                    dark
+                    
                   >
                     <v-container>
                       <v-row class="mx-auto mt-10">
@@ -156,10 +156,10 @@
                     to="/new-product"
                     id="accountimg"
                     rounded="xl"
-                    color="#385F73"
+                    
                     height="200"
                     width="350"
-                    dark
+                    
                   >
                     <v-container>
                       <v-row class="mx-auto mt-10">
