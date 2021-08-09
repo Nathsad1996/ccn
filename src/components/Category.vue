@@ -21,7 +21,7 @@
           VISITEZ NOS MAGNIFIQUES PRODUITS
         </v-card-title>
         <v-card-actions class="d-flex justify-center">
-          <v-btn text rounded block>
+          <v-btn text rounded>
             details
           </v-btn>
         </v-card-actions>

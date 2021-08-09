@@ -32,7 +32,7 @@
             <v-container>
               <v-row>
                 <v-col offset-lg="3" offset-md="3" lg="6" md="6" cols="12">
-                  <v-card rounded="xl">
+                  <v-card flat>
                     <v-card-title
                       class="text-lg-h3 d-flex justify-center text-center"
                       >Informations du compte</v-card-title
@@ -44,56 +44,48 @@
                         outlined
                         label="votre email"
                         readonly
-                        append-icon="mdi-pencil"
                       ></v-text-field>
                       <v-text-field
                         dense
                         outlined
                         label="votre email"
                         readonly
-                        append-icon="mdi-pencil"
                       ></v-text-field>
                       <v-text-field
                         dense
                         outlined
                         label="votre email"
                         readonly
-                        append-icon="mdi-pencil"
                       ></v-text-field>
                       <v-text-field
                         dense
                         outlined
                         label="votre email"
                         readonly
-                        append-icon="mdi-pencil"
                       ></v-text-field>
                       <v-text-field
                         dense
                         outlined
                         label="votre email"
                         readonly
-                        append-icon="mdi-pencil"
                       ></v-text-field>
                       <v-text-field
                         dense
                         outlined
                         label="votre email"
                         readonly
-                        append-icon="mdi-pencil"
                       ></v-text-field>
                       <v-text-field
                         dense
                         outlined
                         label="votre email"
                         readonly
-                        append-icon="mdi-pencil"
                       ></v-text-field>
                       <v-text-field
                         dense
                         outlined
                         label="votre email"
                         readonly
-                        append-icon="mdi-pencil"
                       ></v-text-field>
                     </v-card-text>
                     <v-card-actions>
@@ -110,8 +102,8 @@
             <v-container>
               <v-row dense class="mx-auto">
                 <v-col>
-                  <v-card
-                  to="/catalog"
+                  <v-card hover
+                    to="/catalog"
                     id="accountimg"
                     rounded="xl"
                     color="#385F73"
@@ -135,8 +127,8 @@
                   </v-card>
                 </v-col>
                 <v-col>
-                  <v-card
-                  to="/orders"
+                  <v-card hover
+                    to="/orders"
                     id="accountimg"
                     rounded="xl"
                     color="#385F73"
@@ -160,8 +152,8 @@
                   </v-card>
                 </v-col>
                 <v-col>
-                  <v-card
-                  to="/new-product"
+                  <v-card hover
+                    to="/new-product"
                     id="accountimg"
                     rounded="xl"
                     color="#385F73"

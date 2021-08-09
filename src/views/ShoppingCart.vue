@@ -35,7 +35,7 @@
         </v-card>
       </v-col>
       <v-col lg="3" md="3" cols="12">
-        <v-card color="#D3D3D3" elevation="5" rounded="lg">
+        <v-card  rounded="lg">
           <v-card-title class="justify-center"
             >RESUME DE LA COMMANDE</v-card-title
           >
@@ -65,7 +65,7 @@
             </v-simple-table>
           </v-card-text>
           <v-card-actions>
-            <v-btn to="/payment" block color="#2C3851" dark> ALLER AU PAIEMENT </v-btn>
+            <v-btn to="/payment" x-large block color="success" dark> ALLER AU PAIEMENT </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
