@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar elevate-on-scroll app>
+  <v-app-bar height="70"  app>
     <v-btn icon @click="navigationDrawer">
       <v-icon size="40">mdi-menu</v-icon>
     </v-btn>
@@ -12,11 +12,11 @@
     <v-spacer></v-spacer>
 
     <v-text-field
+    color="success"
       rounded
       outlined
       clearable
-      dense
-      class="mt-6 d-none d-sm-flex"
+      class="mt-7 d-none d-sm-flex"
       append-icon="mdi-magnify"
       placeholder="Rechercher un produit"
     ></v-text-field>
