@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar elevate-on-scroll color="blue-grey darken-2" app>
+  <v-app-bar elevate-on-scroll app>
     <!-- <v-app-bar-nav-icon @click="goHome">
       <v-icon size="40">mdi-shopping</v-icon>
     </v-app-bar-nav-icon> -->
