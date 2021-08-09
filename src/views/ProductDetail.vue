@@ -112,14 +112,14 @@
           <v-tab-item>
             <v-card>
               <v-card-title class="justify-center text-center text-lg-h4">
-                Donner votre avis et lisez ce que les autres ont écrit!
+                Donner votre avis et lisez ce que les autres ont écrit.
               </v-card-title>
               <v-container>
                 <v-row>
                   <v-col cols="12">
                     <v-form @submit.prevent="submitreview">
                       Ta note :
-                      <v-rating :value="2"></v-rating>
+                      <v-rating hover v-model="rating"></v-rating>
                       Ton avis :
                       <br />
                       <v-textarea
@@ -127,7 +127,7 @@
                         dense
                         outlined
                         hint="laisse nous un avis"
-                        placeholder="laisser nous un avis pour aider les autres à bien choisir"
+                        placeholder="laisser nous un avis"
                         :counter="100"
                       ></v-textarea>
                       <v-btn class="d-flex justify-center" color="info" large solo rounded type="submit">SOUMETTRE</v-btn>
@@ -172,6 +172,7 @@ import { mapActions } from "vuex";
 export default {
   components: {},
   data: () => ({
+    rating: 0,
     tab: null,
     quantity: 0,
     model: 0,
