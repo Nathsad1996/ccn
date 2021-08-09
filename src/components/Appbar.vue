@@ -12,29 +12,19 @@
     <v-spacer></v-spacer>
 
     <v-text-field
-    color="success"
+    background-color="white"
       rounded
       outlined
       clearable
       class="mt-7 d-none d-sm-flex"
       append-icon="mdi-magnify"
       placeholder="Rechercher un produit"
-    ></v-text-field>
+      @click:append="search"
+      @keypress.enter="search"
+    >
+    </v-text-field>
 
     <v-spacer></v-spacer>
-
-    <v-menu :rounded="'0'" offset-y>
-      <template v-slot:activator="{ on, attrs }">
-        <v-btn v-bind="attrs" v-on="on" icon>
-          <v-icon>mdi-translate</v-icon>
-        </v-btn>
-      </template>
-      <v-list>
-        <v-list-item link v-for="(item, index) in lang" :key="index">
-          <v-list-item-title>{{ item }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
 
     <v-btn icon to="/shopping-cart">
       <v-icon>mdi-cart-outline</v-icon>
@@ -145,6 +135,9 @@ export default {
       this.loginForm = false;
       console.log("you're logged in");
     },
+    search(){
+      console.log("i'm search action");
+    }
   },
   computed: {
     ...mapState(["cartcount"]),
