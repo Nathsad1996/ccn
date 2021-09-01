@@ -11,7 +11,6 @@
         >
           <v-tab><v-icon>mdi-cart</v-icon> &nbsp; Vos Commandes </v-tab>
           <v-tab><v-icon>mdi-cog</v-icon> &nbsp; Votre compte </v-tab>
-          <v-tab><v-icon>mdi-shopping</v-icon> &nbsp; Votre Boutique </v-tab>
         </v-tabs>
       </v-col>
     </v-row>
@@ -32,7 +31,7 @@
             <v-container>
               <v-row>
                 <v-col offset-lg="3" offset-md="3" lg="6" md="6" cols="12">
-                  <v-card flat>
+                  <v-card rounded="xl">
                     <v-card-title
                       class="text-lg-h3 d-flex justify-center text-center"
                       >Informations du compte</v-card-title
@@ -42,48 +41,56 @@
                       <v-text-field
                         dense
                         outlined
+                        rounded
                         label="votre email"
                         readonly
                       ></v-text-field>
                       <v-text-field
                         dense
                         outlined
+                        rounded
                         label="votre email"
                         readonly
                       ></v-text-field>
                       <v-text-field
                         dense
                         outlined
+                        rounded
                         label="votre email"
                         readonly
                       ></v-text-field>
                       <v-text-field
                         dense
                         outlined
+                        rounded
                         label="votre email"
                         readonly
                       ></v-text-field>
                       <v-text-field
                         dense
                         outlined
+                        rounded
                         label="votre email"
                         readonly
                       ></v-text-field>
                       <v-text-field
                         dense
                         outlined
+                        rounded
                         label="votre email"
                         readonly
                       ></v-text-field>
                       <v-text-field
                         dense
                         outlined
+                        rounded
                         label="votre email"
                         readonly
                       ></v-text-field>
                       <v-text-field
                         dense
                         outlined
+                        rounded
                         label="votre email"
                         readonly
                       ></v-text-field>
@@ -93,87 +100,6 @@
                         >Sauvegarder</v-btn
                       >
                     </v-card-actions>
-                  </v-card>
-                </v-col>
-              </v-row>
-            </v-container>
-          </v-tab-item>
-          <v-tab-item>
-            <v-container>
-              <v-row dense class="mx-auto">
-                <v-col>
-                  <v-card hover
-                    to="/catalog"
-                    id="accountimg"
-                    rounded="xl"
-                    
-                    height="200"
-                    width="350"
-                    
-                  >
-                    <v-container>
-                      <v-row class="mx-auto mt-10">
-                        <v-col cols="5">
-                          <v-img
-                            contain
-                            src="../assets/catalog.svg"
-                            aspect-ratio="1.6"
-                          >
-                          </v-img>
-                        </v-col>
-                        <v-col class="mt-4"> Votre catalogue </v-col>
-                      </v-row>
-                    </v-container>
-                  </v-card>
-                </v-col>
-                <v-col>
-                  <v-card hover
-                    to="/orders"
-                    id="accountimg"
-                    rounded="xl"
-                    
-                    height="200"
-                    width="350"
-                    
-                  >
-                    <v-container>
-                      <v-row class="mx-auto mt-10">
-                        <v-col cols="5">
-                          <v-img
-                            contain
-                            src="../assets/orders.svg"
-                            aspect-ratio="1.6"
-                          >
-                          </v-img>
-                        </v-col>
-                        <v-col class="mt-4"> Les commandes clients </v-col>
-                      </v-row>
-                    </v-container>
-                  </v-card>
-                </v-col>
-                <v-col>
-                  <v-card hover
-                    to="/new-product"
-                    id="accountimg"
-                    rounded="xl"
-                    
-                    height="200"
-                    width="350"
-                    
-                  >
-                    <v-container>
-                      <v-row class="mx-auto mt-10">
-                        <v-col cols="5">
-                          <v-img
-                            contain
-                            src="../assets/add-product.svg"
-                            aspect-ratio="1.6"
-                          >
-                          </v-img>
-                        </v-col>
-                        <v-col class="mt-4"> Ajouter un produits </v-col>
-                      </v-row>
-                    </v-container>
                   </v-card>
                 </v-col>
               </v-row>

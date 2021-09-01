@@ -8,10 +8,10 @@
           </v-card-title>
           <v-card-text>
             <v-form>
-              <v-text-field outlined placeholder="Votre Nom"></v-text-field>
-              <v-text-field outlined placeholder="Votre Postnom"></v-text-field>
-              <v-text-field outlined placeholder="Votre Email"></v-text-field>
-              <v-textarea outlined placeholder="Votre Préoccupation"></v-textarea>
+              <v-text-field rounded outlined placeholder="Votre Nom"></v-text-field>
+              <v-text-field rounded outlined placeholder="Votre Postnom"></v-text-field>
+              <v-text-field rounded outlined placeholder="Votre Email"></v-text-field>
+              <v-textarea rounded outlined placeholder="Votre Préoccupation"></v-textarea>
               <v-btn rounded color="success" large block>Envoyer</v-btn>
             </v-form>
           </v-card-text>

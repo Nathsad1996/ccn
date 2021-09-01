@@ -26,21 +26,6 @@ const routes = [{
     component: () => import( /* webpackChunkName: "products" */ '../views/ProductsPage.vue')
   },
   {
-    path: '/catalog',
-    name: 'Catalog',
-    component: () => import( /* webpackChunkName: "partners" */ '../views/Catalog.vue')
-  },
-  {
-    path: '/orders',
-    name: 'Orders',
-    component: () => import( /* webpackChunkName: "partners" */ '../views/ClientsOrders.vue')
-  },
-  {
-    path: '/new-product',
-    name: 'NewProduct',
-    component: () => import( /* webpackChunkName: "categories" */ '../views/AddProduct.vue')
-  },
-  {
     path: '/product-detail',
     name: 'ProductDetail',
     component: () => import( /* webpackChunkName: "product-detail" */ '../views/ProductDetail.vue')
@@ -54,11 +39,6 @@ const routes = [{
     path: '/shopping-cart',
     name: 'ShoppingCart',
     component: () => import( /* webpackChunkName: "product-detail" */ '../views/ShoppingCart.vue')
-  },
-  {
-    path: '/new-supplier',
-    name: 'NewSupplier',
-    component: () => import( /* webpackChunkName: "product-detail" */ '../views/NewSupplier.vue')
   },
   {
     path: '/payment',

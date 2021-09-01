@@ -37,20 +37,22 @@
           <v-icon>mdi-login</v-icon>
         </v-btn>
       </template>
-      <v-card>
-        <v-card-title class="justify-center"
+      <v-card height="300" rounded="xl">
+        <v-card-title class="justify-center text-h4 mb-3"
           >Se connecter</v-card-title
         >
-        <v-card-text>
+        <v-card-text class="mb-0 pb-0">
           <v-form>
             <v-text-field
               dense
+              rounded
               outlined
               placeholder="Email ou Login"
               append-icon="mdi-at"
             ></v-text-field>
             <v-text-field
               dense
+              rounded
               outlined
               placeholder="Mot de passe"
               v-model="password"
@@ -60,43 +62,16 @@
             ></v-text-field>
           </v-form>
         </v-card-text>
-        <v-card-actions class="">
-          <v-btn @click="login" rounded block large color="success" outlined
+        <v-card-actions class="mt-0 pt-0 pr-6 pl-6">
+          <v-btn @click="login" large rounded block color="success" outlined
             >Se Connecter</v-btn
           >
         </v-card-actions>
       </v-card>
     </v-dialog>
+              
+    <v-icon class="pl-2" @click="goNewUser">mdi-account-plus-outline</v-icon>
 
-    <v-menu offset-y>
-      <template v-slot:activator="{ on, attrs }">
-        <v-btn icon v-bind="attrs" v-on="on">
-          <v-icon>mdi-account-plus-outline</v-icon>
-        </v-btn>
-      </template>
-      <v-list>
-        <v-dialog v-model="dialog" width="500">
-          <template v-slot:activator="{ on, attrs }">
-            <v-list-item v-bind="attrs" v-on="on" link>
-              <v-icon>mdi-account-plus-outline</v-icon>
-              &nbsp;S'enregistrer
-            </v-list-item>
-          </template>
-
-          <v-card outlined>
-            <v-card-title>En tant que :</v-card-title>
-            <v-card-text>
-              <v-list>
-                <v-list-item @click="goSupplier" link>
-                  Fournisseur
-                </v-list-item>
-                <v-list-item @click="goNewUser" link> Utilisateur </v-list-item>
-              </v-list>
-            </v-card-text>
-          </v-card>
-        </v-dialog>
-      </v-list>
-    </v-menu>
   </v-app-bar>
 </template>
 <script>
